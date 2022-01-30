@@ -1,0 +1,25 @@
+extend base
+
+block content
+    .container-fluid
+        .row.justify-content-center
+            // left column
+            .col-md-8
+                // general form elements
+                .card.card-primary
+                    .card-header
+                        h3.card-title Send Mail
+                        form.complaint(role='form' method='POST' action="")
+                            .card-body
+                                .form-group
+                                    label(for='subject') Complaint subject
+                                    input#subject.form-control(type='text' name='subject' placeholder='Enter subject')
+                                .row
+                                    .col-12
+                                        .form-group
+                                            label Write Complaint
+                                            textarea#complaint.form-control(rows='3' name='message' placeholder='Enter ...')
+                            
+                            .card-footer
+                                button.btn.btn-primary(type='submit' name='sendmail') Submit
+                            // /.card

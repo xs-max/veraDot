@@ -1,0 +1,39 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../css/alert.css')
+    link(rel='stylesheet' href='../css/card.css')
+    title Director Of Transport, NAU
+.form-wrapper
+    .form-container
+        .title Payment Form
+        .input-form
+            form.pay
+                .section-1
+                    .items
+                        label.label card number
+                        input.input(type='text' maxlength='16' data-mask='0000 0000 0000 0000' placeholder='1234 1234 1234 1234' required="")
+                .section-2
+                    .items
+                        label.label card holder
+                        input.input(type='text' placeholder='Name on card' required="")
+                .section-2
+                    .items
+                        label.label Amount
+                        input#amount.input(type='text' readonly value="13000" placeholder='Name on card' required="")
+                .section-3
+                    .items
+                        label.label Expire date
+                        input.input(type='number' data-mask='00 / 00' placeholder='MM / YY' required="")
+                    .items
+                        .cvc
+                            label.label cvc code
+                            .tooltip
+                                | ?
+                                .cvc-img
+                                    img(src='https://i.imgur.com/r8oXtry.png' alt='')
+                        input.input(type='text' data-mask='0000' placeholder='0000' required="")
+                button.butn proceed
+    script(src="../js/bundule.js") 

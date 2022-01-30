@@ -1,0 +1,31 @@
+extend base
+
+block content
+    section.banner
+        .login-container
+            form.form-login.reg()
+                ul.login-nav
+                li.login-nav__item.active
+                    a(href='login') Sign In
+                li.login-nav__item
+                    a(href='register') Sign Up
+                label.login__label(for='login-input-user')
+                | Name
+                input#login-input-user.login__input(type='text')
+                label.login__label(for='login-input-email')
+                | Email
+                input#login-input-email.login__input(type='email')
+                label.login__label(for='login-input-password')
+                | Password
+                input#login-input-password.login__input(type='password')
+                label.login__label(for='login-input-cpass')
+                | Confirm Password
+                input#login-input-cpass.login__input(type='password')
+                label.login__label(for='login-input-phone')
+                | Phone
+                input#login-input-phone.login__input(type='text')
+               
+                button.login__submit(type="submit") Sign in
+            a.login__forgot(href='#') Forgot Password?
+
+            - console.log("hi")

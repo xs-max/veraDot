@@ -1,0 +1,32 @@
+extend base
+
+block content 
+    .container-fluid
+        // Page Heading
+        h1.h3.mb-4.text-gray-800 Dashboard
+        .card.shadow.mb-4
+            .card-header.py-3
+                h6.m-0.font-weight-bold.text-primary Registered Vehicles
+            .card-body
+                .table-responsive
+                    table#dataTable.table.table-bordered(width='100%' cellspacing='0')
+                        thead
+                            tr
+                                th #
+                                th Vehicle Type
+                                th Plate Number
+                                th Payment Status
+                        tfoot
+                            tr
+                                th #
+                                th Vehicle Type
+                                th Plate Number
+                                th Payment Status
+                        tbody
+                            each vehicle, i in vehicles
+                                tr
+                                    td #{i + 1}
+                                    td #{vehicle.vehicleType}
+                                    td #{vehicle.plateNumber}
+                                    td #{vehicle.paymentStatus}
+                                    

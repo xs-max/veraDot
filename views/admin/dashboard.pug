@@ -1,0 +1,35 @@
+extend base
+
+block content 
+    .container-fluid
+        // Page Heading
+        h1.h3.mb-4.text-gray-800 Dashboard
+        .card.shadow.mb-4
+            .card-header.py-3
+                h6.m-0.font-weight-bold.text-primary Vehilcles Owners
+            .card-body
+                .table-responsive
+                    table#dataTable.table.table-bordered(width='100%' cellspacing='0')
+                        thead
+                            tr
+                                th #
+                                th Name
+                                th Email
+                                th Phone
+                                th Number of vehicles
+                        tfoot
+                            tr
+                                th #
+                                th Name
+                                th Email
+                                th Phone
+                                th Number of vehicles
+                        tbody
+                            each user, i in users
+                                tr
+                                    td #{i + 1}
+                                    td #{user.name}
+                                    td #{user.email}
+                                    td #{user.phone}
+                                    td #{user.vehicles.length}
+                                

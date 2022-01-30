@@ -1,0 +1,15 @@
+extend base
+
+block content 
+    .container-fluid
+        each complaint in complaints
+            .card.mt-5.mb-5.py-3.px-3(style='width: 100%;')
+                .row.justify-content-center
+                    .col-3
+                        img.card-img-top(src='../img/users/avatar04.png' alt='...' height="200px" width="100px")          
+                    .col-7    
+                        h3 #{complaint.user.name}
+                        h5 #{complaint.complaintSubject}      
+                        p.card-text #{complaint.complaint}
+
+                                

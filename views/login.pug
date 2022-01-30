@@ -1,0 +1,24 @@
+extend base
+
+block content
+    section.banner
+        .login-container
+            form.form-login.login()
+                ul.login-nav
+                li.login-nav__item.active
+                    a(href='login') Sign In
+                li.login-nav__item
+                    a(href='register') Sign Up
+                label.login__label(for='login-input-user')
+                | Email
+                input#login-input-user.login__input(type='text')
+                label.login__label(for='login-input-password')
+                | Password
+                input#login-input-password.login__input(type='password')
+                label.login__label--checkbox(for='login-sign-up')
+                input#login-sign-up.login__input--checkbox(type='checkbox')
+                | &#x9;&#x9;&#x9;Keep me Signed in
+                button.login__submit(type=submit) Sign in
+            a.login__forgot(href='#') Forgot Password?
+        .alert.alert--error invalid
+        

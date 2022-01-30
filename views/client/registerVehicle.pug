@@ -1,0 +1,30 @@
+extend base
+
+block content 
+    // Begin Page Content
+    .container-fluid
+        .container
+            form.car-reg(method="POST" action="/api/vehicle" enctype="multipart/form-data")
+                h2.text-center Join Our Network
+                .row.jumbotron
+                    .col-sm-12.form-group
+                        label(for='v-type') Vehicle Type
+                        select#v-type.form-control.browser-default.custom-select(required="")
+                            option(value='') Select Vehicle Type
+                            option(value='Bus') Bus
+                            option(value='Shuttle') Shuttle
+                            option(value='keke') Keke
+                    .col-sm-12.form-group
+                        label(for='plate') Plate Number
+                        input#plate.form-control(type='text' name='fname' placeholder='Enter your Plate Number' required='')
+                    .col-sm-12.form-group
+                        label(for='owner') Proof Of OwnerShip
+                        input#owner.form-control(type='file' accept='image/*', name='lname' placeholder='Proof of Ownership' required='')
+                    .col-sm-12
+                        input#chb.form-check.d-inline(type='checkbox' name="doc" required='')
+                        label.form-check-label(for='chb')
+                        | I accept all terms and conditions.
+                    .col-sm-12.form-group.mb-0
+                        button.btn.btn-primary.float-right Submit
+
+        // /.container-fluid

@@ -1,0 +1,41 @@
+{
+  "name": "veradot",
+  "version": "1.0.0",
+  "description": "registration for unizik Department of transport",
+  "main": "server.js",
+  "source": "./public/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundule.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundule.js"
+  },
+  "author": "vera",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "a": "^2.1.2",
+    "axios": "^0.21.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.5.0",
+    "pug": "^3.0.2",
+    "sharp": "^0.26.3",
+    "slugify": "^1.4.6",
+    "socket.io": "^4.3.1",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

@@ -1,0 +1,17 @@
+header.header
+        a.logo(href='index.php') NAU DOT
+        nav.user-nav
+            if !user
+                .user-nav__icon-box
+                    ul
+                        li
+                            a(href='/login') login
+                .user-nav__icon-box
+                    ul
+                        li
+                            a(href='/register') register
+            else
+                .user-nav__icon-box
+                    ul
+                        li
+                            a(href='/logout') logout
