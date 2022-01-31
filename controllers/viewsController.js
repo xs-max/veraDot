@@ -60,7 +60,7 @@ exports.getVehicleRegistrationPage = catchAsync( async (req, res, next) => {
 })
 
 exports.getPaymentPage = catchAsync(async (req, res, next) => {
-  res.status(200).render('client/payment')
+  res.status(200).render("client/payment", { amount: req.session.amount });
 })
 
 

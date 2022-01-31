@@ -46,9 +46,19 @@ const filterObj = (obj, ...allowedFields) => {
 
 
 exports.addVehicle = (req, res, next) => {
+
+    let amount;
     const data = req.body
-    req.session.vehicle = data
-    console.log(data);
+    req.session.vehicle = data;
+    if (req.body.vehicleType == "Shuttle") {
+      amount = 28000;
+    }else if (req.body.vehicleType == "keke") {
+      amount = 18000;
+    }else if (req.body.vehicleType == "Bus") {
+      amount = 35000;
+    }
+
+    req.session.amount = amount;
     res.status(200).json({
         status: 'success'
     })

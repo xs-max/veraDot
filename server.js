@@ -7,7 +7,7 @@ dotenv.config({
 
 const app = require('./app');
 
-const DB = process.env.DATABASE_LOCAL;
+const DB = 'mongodb+srv://codemax:IZGTRNNwGGU80L1G@cluster0.dtoim.mongodb.net/veradot?retryWrites=true&w=majority';
 
 mongoose.connect(DB, {
     useNewUrlParser: true,
